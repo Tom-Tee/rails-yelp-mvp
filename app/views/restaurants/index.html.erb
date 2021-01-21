@@ -1,0 +1,24 @@
+<div class="container">
+
+<h1>Restaurants</h1>
+
+<%= link_to "Add a Venue", new_restaurant_path, class: "btn btn-danger"%>
+
+<div class="inner" style = "padding: 20px">
+
+<p> <% @restaurants.each do |r| %> </p>
+<div class="inner" style = "padding: 20px">
+  <%= link_to r.name, restaurant_path(r), class: "btn btn-primary" %>
+  <p> <%= r.address %> </p>
+  <p> <%= r.phone_number %> </p>
+  <p> <%= r.category %> </p>
+  </div>
+<p> <% end %> </p>
+
+
+
+
+
+</div>
+
+

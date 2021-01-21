@@ -1,0 +1,27 @@
+<div class="container mx-auto py-4">
+
+<h1>Restaurant</h1>
+
+<div class="inner p-3 m-3" style = "  border: 1px solid black;">
+  <p> <%= @restaurant.name %> </p>
+  <p> <%= @restaurant.address %> </p>
+  <p> <%= @restaurant.phone_number %> </p>
+  <p> <%= @restaurant.category %> </p>
+
+
+</div>
+
+  <% @restaurant.reviews.each do |review| %>
+  <h5> Review!!!!</h5>
+  <p>  <%= review.content %> </p>
+  <p> rating: <%= review.rating %> /5 </p>
+  <br>
+  <% end %>
+  <%= link_to "New review", new_restaurant_review_path(@restaurant), class:"btn btn-primary " %>
+  <br>
+    <br>
+  <%= link_to "Return Home", restaurants_path, class:"btn btn-primary " %>
+
+
+
+</div>
